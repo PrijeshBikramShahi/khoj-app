@@ -1,18 +1,15 @@
 import 'package:flutter/foundation.dart';
 import 'package:latlong2/latlong.dart';
 import '../../../../core/error/failures.dart';
-import '../../../../core/error/result.dart';
-import '../../../../core/utils/constants.dart';
-import '../../../../core/utils/extensions.dart';
-import '../../route/domain/entities/stop.dart';
-import '../../route/domain/entities/optimized_route.dart';
-import '../../route/domain/usecases/add_stop_usecase.dart';
-import '../../route/domain/usecases/clear_stops_usecase.dart';
-import '../../route/domain/usecases/get_stops_usecase.dart';
-import '../../route/domain/usecases/optimize_route_usecase.dart';
-import '../../route/domain/usecases/remove_stop_usecase.dart';
-import '../../geocoding/domain/usecases/geocode_usecase.dart';
-import '../../geocoding/domain/usecases/reverse_geocode_usecase.dart';
+import '../../../route/domain/entities/stop.dart';
+import '../../../route/domain/entities/optimized_route.dart';
+import '../../../route/domain/usecases/add_stop_usecase.dart';
+import '../../../route/domain/usecases/clear_stops_usecase.dart';
+import '../../../route/domain/usecases/get_stops_usecase.dart';
+import '../../../route/domain/usecases/optimize_route_usecase.dart';
+import '../../../route/domain/usecases/remove_stop_usecase.dart';
+import '../../../geocoding/domain/usecases/geocode_usecase.dart';
+import '../../../geocoding/domain/usecases/reverse_geocode_usecase.dart';
 
 /// View model for the map screen
 /// Handles all business logic and state management for the map UI

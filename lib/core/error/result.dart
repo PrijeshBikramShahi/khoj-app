@@ -105,6 +105,14 @@ class Result<T> {
     return isSuccess ? _value! : defaultValue();
   }
 
+  /// Handles both result states without exposing nullable internals.
+  R fold<R>(
+    R Function(RouteOptimizerFailure failure) onFailure,
+    R Function(T value) onSuccess,
+  ) {
+    return isSuccess ? onSuccess(value) : onFailure(failure);
+  }
+
   @override
   String toString() {
     return isSuccess ? 'Result.success($_value)' : 'Result.failure($_failure)';

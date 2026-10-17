@@ -2,9 +2,6 @@ import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
-import 'core/error/failures.dart';
-import 'core/error/result.dart';
-import 'core/utils/constants.dart';
 import 'features/geocoding/data/datasources/geocoding_remote_datasource.dart';
 import 'features/geocoding/data/repositories/geocoding_repository_impl.dart';
 import 'features/geocoding/domain/repositories/geocoding_repository.dart';

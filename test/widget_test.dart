@@ -5,26 +5,32 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:khoj/main.dart';
+import 'package:route_optimizer/core/error/failures.dart';
+import 'package:route_optimizer/core/error/result.dart';
+import 'package:route_optimizer/features/route/domain/entities/stop.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  test('validates route stops against geographic bounds', () {
+    final kathmandu = Stop(
+      id: 'kathmandu',
+      coordinates: const LatLng(27.7172, 85.3240),
+    );
+    final impossible = Stop(
+      id: 'invalid',
+      coordinates: const LatLng(95, 200),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(kathmandu.isValid, isTrue);
+    expect(impossible.isValid, isFalse);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  test('fold exposes exactly one result branch', () {
+    const success = Result<int>.success(3);
+    final failure = Result<int>.failure(ValidationFailure('invalid stop'));
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(success.fold((_) => -1, (value) => value * 2), 6);
+    expect(failure.fold((error) => error.message, (_) => 'ok'), 'invalid stop');
   });
 }

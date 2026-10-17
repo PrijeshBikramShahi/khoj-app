@@ -3,9 +3,7 @@ import 'dart:math';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 import '../../../../core/error/exceptions.dart';
-import '../../../../core/error/failures.dart';
 import '../../../../core/utils/constants.dart';
-import '../../domain/entities/stop.dart';
 import '../../domain/entities/optimized_route.dart';
 
 /// Remote data source for route operations using OSRM API

@@ -2,7 +2,6 @@ import 'package:latlong2/latlong.dart';
 import '../../../../core/error/exceptions.dart';
 import '../../../../core/error/failures.dart';
 import '../../../../core/error/result.dart';
-import '../../../../core/utils/constants.dart';
 import '../../domain/repositories/geocoding_repository.dart';
 import '../datasources/geocoding_remote_datasource.dart';
 

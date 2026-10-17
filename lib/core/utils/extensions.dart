@@ -1,4 +1,4 @@
-/// Extension methods for common types
+library;
 
 /// Extension for String to check if it's empty or whitespace
 extension StringExtensions on String {
@@ -11,8 +11,8 @@ extension StringExtensions on String {
 
 /// Extension for List to check if it's empty
 extension ListExtensions<T> on List<T> {
-  /// Checks if the list is null or empty
-  bool get isNullOrEmpty => this == null || isEmpty;
+  /// Checks if the list is empty
+  bool get isNullOrEmpty => isEmpty;
 
   /// Checks if the list is not null and not empty
   bool get isNotNullOrEmpty => !isNullOrEmpty;
