@@ -4,8 +4,8 @@ import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/utils/constants.dart';
+import '../../../../core/utils/extensions.dart';
 import '../../../../features/route/domain/entities/stop.dart';
-import '../../../../features/route/domain/entities/optimized_route.dart';
 import '../viewmodels/map_viewmodel.dart';
 
 /// Map screen using the new Clean Architecture with MVVM

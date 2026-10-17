@@ -1,5 +1,5 @@
-import '../../entities/stop.dart';
-import '../../repositories/route_repository.dart';
+import '../entities/stop.dart';
+import '../repositories/route_repository.dart';
 import '../../../../core/error/failures.dart';
 import '../../../../core/error/result.dart';
 

@@ -1,5 +1,4 @@
 import 'package:latlong2/latlong.dart';
-import '../../../../core/error/failures.dart';
 import '../../../../core/error/result.dart';
 
 /// Abstract interface for geocoding operations

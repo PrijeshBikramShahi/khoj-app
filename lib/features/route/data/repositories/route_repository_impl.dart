@@ -1,8 +1,6 @@
-import 'package:latlong2/latlong.dart';
 import '../../../../core/error/exceptions.dart';
 import '../../../../core/error/failures.dart';
 import '../../../../core/error/result.dart';
-import '../../../../core/utils/constants.dart';
 import '../../domain/entities/stop.dart';
 import '../../domain/entities/optimized_route.dart';
 import '../../domain/repositories/route_repository.dart';

@@ -1,5 +1,5 @@
 import 'package:latlong2/latlong.dart';
-import '../../repositories/geocoding_repository.dart';
+import '../repositories/geocoding_repository.dart';
 import '../../../../core/error/failures.dart';
 import '../../../../core/error/result.dart';
 
